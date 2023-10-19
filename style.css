@@ -1,0 +1,49 @@
+*{
+  font-size: 22px;
+}
+body div{
+  border: 1px solid;
+}
+
+body{
+  display: grid;
+  grid-template-columns: minmax(250px, 2fr) minmax(600px, 7fr);
+}
+
+.sidebar{
+  background: #e4d7d7;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar > div > div{
+  display: flex;
+  gap: 5px;
+  padding: 7px;
+  align-items: center;
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+}
+
+main{
+  background: #cbd4df;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(100px, 200px) minmax(80vh, 90vh);
+}
+
+main > div{
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
