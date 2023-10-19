@@ -1,13 +1,21 @@
 *{
-  font-size: 22px;
+  font-size: 18px;
 }
-body div{
+
+.icon{
+  width: 20px;
+  height: 20px;
   border: 1px solid;
+
+}
+
+body div{
+  /* border: 1px solid; */
 }
 
 body{
   display: grid;
-  grid-template-columns: minmax(250px, 2fr) minmax(600px, 7fr);
+  grid-template-columns: minmax(220px, 2fr) minmax(600px, 7fr);
 }
 
 .sidebar{
@@ -26,16 +34,11 @@ body{
   align-items: center;
 }
 
-.icon{
-  width: 20px;
-  height: 20px;
-}
-
 main{
   background: #cbd4df;
   height: 100vh;
   display: grid;
-  grid-template-rows: minmax(100px, 200px) minmax(80vh, 90vh);
+  grid-template-rows: minmax(110px, 200px) minmax(80vh, 90vh);
 }
 
 main > div{
@@ -43,7 +46,54 @@ main > div{
   height: auto;
 }
 
+.header > div{
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+}
 
+.header > div > div{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  align-items: center;
+}
 
+.main-content{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
 
+.project-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+}
 
+.project-container > div{
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+
+.project-icon-container{
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  padding: 10px;
+}
+
+.announcement-content{
+  padding: 10px;
+}
+
+.announcement-content > div{
+  padding: 5px;
+}
+
+.trending-content > div{
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+}
