@@ -13,12 +13,22 @@
 }
 
 .icon{
-  width: 20px;
-  height: 20px;
-  border: 1px solid;
-
+  min-width: 30px;
+  height: 30px;
 }
 
+.nav-heading svg{
+  width: 50px;
+  height: 50px;
+}
+
+svg{
+  fill: var(--main-font-color);
+}
+
+.project svg{
+  fill: var(--secondary-font-color);
+}
 
 body{
   display: grid;
@@ -43,8 +53,13 @@ body{
 }
 
 .sidebar .nav-heading{
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-size: 1.6rem;
   font-weight: 800;
+  letter-spacing: -0.1rem;
+  text-shadow: 1px 1px #eabecf;
   padding: 10px;
 }
 
@@ -78,6 +93,7 @@ main{
 .top-header input{
   width: 500px;
   height: 25px;
+  border: solid 3px var(--main-font-color);
   border-radius: 30px;
 }
 
@@ -138,8 +154,8 @@ main{
 
 .project{
   display: grid;
-  grid-template-rows: 4fr 1fr;
-  padding: 10px 20px;
+  grid-template-rows: 3.7fr 1fr;
+  padding: 0 20px 10px;
   align-items: center;
 }
 
@@ -177,7 +193,7 @@ main{
 
 .announcement-content, .trending-content{
   background: var(--secondary-bg-color);
-  padding: 5px 15px;
+  padding: 15px;
   margin: 5px 0;
   box-shadow: 3px 3px 8px #479796;
   border-radius: 20px;
@@ -192,10 +208,9 @@ main{
 .trending-content > div{
   background: var(--secondary-bg-color);
   display: flex;
-  gap: 8px;
-  padding: 10px;
+  gap: 30px;
+  padding: 15px;
   align-items: center;
-  justify-content: center;
 }
 
 .trending-content .trending-user, 
@@ -208,3 +223,9 @@ main{
   font-size: 0.8rem;
 }
 
+.trending-content .icon,
+.profile-icon{
+  border: solid 1px #2a4966;
+  border-radius: 50%;
+  text-align: center;
+}
