@@ -1,5 +1,15 @@
 *{
   font-size: 18px;
+  color: var(--main-font-color);
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root{
+  --main-bg-color: #ffafcc62;
+  --secondary-bg-color: #fdcee0;
+  --tertiary-bg-color: #bde0fe;
+  --main-font-color: #2a4966;
+  --secondary-font-color: #070a11;
 }
 
 .icon{
@@ -9,47 +19,52 @@
 
 }
 
-body div{
-  /* border: 1px solid; */
-}
 
 body{
   display: grid;
-  grid-template-columns: minmax(220px, 2fr) minmax(600px, 7fr);
+  grid-template-columns: 2fr 9fr;
+  margin: 0;
+  min-height: 100vh;
 }
 
 .sidebar{
-  background: #e4d7d7;
-  height: 100vh;
-  width: auto;
+  background: var(--tertiary-bg-color);
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding: 15px;
 }
 
 .sidebar > div > div{
   display: flex;
-  gap: 5px;
-  padding: 7px;
+  gap: 8px;
+  padding: 10px;
   align-items: center;
 }
 
-main{
-  background: #cbd4df;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: minmax(110px, 200px) minmax(80vh, 90vh);
+.sidebar .nav-heading{
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 10px;
 }
 
-main > div{
-  width: 100%;
-  height: auto;
+.sidebar .text{
+  font-size: 1.25rem;
+  font-weight: 550;
+}
+
+main{
+  background: var(--main-bg-color);
+}
+
+.header{
+  background: var(--secondary-bg-color);
 }
 
 .header > div{
   display: flex;
-  justify-content: space-around;
-  padding: 5px;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
 .header > div > div{
@@ -57,24 +72,93 @@ main > div{
   justify-content: space-evenly;
   gap: 20px;
   align-items: center;
+  padding: 10px;
+}
+
+.top-header input{
+  width: 500px;
+  height: 25px;
+  border-radius: 30px;
+}
+
+.top-header .profile-name{
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0px 50px 0px 10px;
+}
+
+.bottom-header .greetings{
+  font-size: 0.8rem;
+}
+
+.bottom-header .profile-name{
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-shadow: #56aeac 1.8px 1px;
+}
+
+.bottom-header button{
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  background: var(--tertiary-bg-color);
+  border: none;
+  border-radius: 15px;
+  padding: 6px 8px;
+  width: 110px;
 }
 
 .main-content{
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1.5fr;
+  padding: 10px 0px 0px 10px;
+  margin: 0;
+}
+
+.main-content .section-header{
+  font-size: 1.35rem;
+  font-weight: 550;
 }
 
 .project-container{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 20px;
   padding: 10px;
 }
 
-.project-container > div{
+.project-wrap{
+  background: var(--secondary-bg-color);
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-columns: 1.2fr 20fr;
+  border: solid 1px #e2a3bb;  
+  box-shadow: 3px 5px 8px #479796;
+  border-radius: 30px;
+}
+
+.project{
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.project-text > div{
+  color: var(--secondary-font-color);
+}
+
+.project-text > .project-header{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.spark{
+  background: var(--tertiary-bg-color);
+  border-radius: 30px 0 0 30px;
+}
+
+.project > div{
+  padding: 10px;
 }
 
 .project-icon-container{
@@ -84,16 +168,43 @@ main > div{
   padding: 10px;
 }
 
-.announcement-content{
-  padding: 10px;
+.right-container{
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.announcement-content, .trending-content{
+  background: var(--secondary-bg-color);
+  padding: 5px 15px;
+  margin: 5px 0;
+  box-shadow: 3px 3px 8px #479796;
+  border-radius: 20px;
+  align-items: center;
+
 }
 
 .announcement-content > div{
-  padding: 5px;
+  padding: 20px;
 }
 
 .trending-content > div{
+  background: var(--secondary-bg-color);
   display: flex;
   gap: 8px;
   padding: 10px;
+  align-items: center;
+  justify-content: center;
 }
+
+.trending-content .trending-user, 
+.announcement-content .announcement-header{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.announcement-content .announcement-description{
+  font-size: 0.8rem;
+}
+
